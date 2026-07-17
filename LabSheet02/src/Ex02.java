@@ -16,7 +16,7 @@ public class Ex02 {
 		ArrayController numbers = new ArrayController();
 		numbers.setNums(nums);
 		numbers.display("All elements:");
-		
+		scan.close();
 	}
 
 }
