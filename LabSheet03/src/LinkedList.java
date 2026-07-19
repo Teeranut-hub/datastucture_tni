@@ -1,3 +1,4 @@
+package lapsheet03;
 
 public class LinkedList {
 	private Node head;
@@ -77,4 +78,35 @@ public class LinkedList {
 			}
 		}
 	}
+	public int length() {
+        int count = 0;
+        Node current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
+    public Object get(int position) {
+        Node current = head;
+        for (int i = 0; i < position && current != null; i++) {
+            current = current.next;
+        }
+        return (current != null) ? current.data : null;
+    }
+
+    public void set(int position, Object value) {
+        Node current = head;
+        for (int i = 0; i < position && current != null; i++) {
+            current = current.next;
+        }
+        if (current != null) {
+            current.data = value;
+        }
+    }
+
+    public void clear() {
+        head = null;
+    }
 }

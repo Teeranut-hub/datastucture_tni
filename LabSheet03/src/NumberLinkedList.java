@@ -1,3 +1,4 @@
+package lapsheet03;
 
 public class NumberLinkedList {
 
@@ -25,6 +26,16 @@ public class NumberLinkedList {
 		
 		numbers.removeLastElement();
 		System.out.println(numbers.traversal());
+		
+		System.out.println("Length of elements in List = " + numbers.length());
+
+        System.out.println("Element in index 1 = " + numbers.get(1));
+
+        numbers.set(1, 100);
+        System.out.println("Updated index 1 to 100 = " + numbers.traversal());
+
+        numbers.clear();
+        System.out.println("Clear Linked List = " + numbers.traversal());
 	}
 
 }
