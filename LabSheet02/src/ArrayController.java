@@ -24,6 +24,7 @@ public class ArrayController {
         for(int num : nums) {
         	System.out.print((!first_element ? ", " : "") + num);
         	first_element = false;
+        	
         }
 	}
 }

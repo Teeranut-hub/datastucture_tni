@@ -17,6 +17,7 @@ public class Ex02 {
 		numbers.setNums(nums);
 		numbers.display("All elements:");
 		
+		scan.close();
 	}
 
 }

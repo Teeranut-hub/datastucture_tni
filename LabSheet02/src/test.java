@@ -1,6 +1,7 @@
+
 import java.util.ArrayList;
 
-public class Ex07 {
+public class test {
 
 	public static void main(String[] args) {
 		
