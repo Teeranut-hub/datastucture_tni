@@ -61,7 +61,7 @@ public class BinarySearchTree {
 		} // end if
 	}
 
-	public int findMinimum() {
+	public int findMinimum(Node new_root) {
 		if (isEmpty()) {
 			return -1;
 		} else {
@@ -170,6 +170,39 @@ public class BinarySearchTree {
 
 	public void deleteByRightSubTree() {
 		//write by yourself
+		Node target;
+		target = deleteNode;
 		
+		int minValue = findMinimum(deleteNode.right);
+		delete(minValue);
+		target.data = minValue;
+	}
+	
+	public boolean findSpecificData(int target) {
+
+		if (isEmpty()) {
+			return false;
+		}
+
+		Node current_node = root;
+		if (target == current_node.data) {
+			return true;
+		} else {
+			while (current_node != null) {
+				if (target == current_node.data) {
+					return true;
+				}
+
+				if (target > current_node.data) {
+					current_node = current_node.right;
+				} else {
+					current_node = current_node.left;
+				}
+
+			}
+
+		}
+
+		return false;
 	}
 }
